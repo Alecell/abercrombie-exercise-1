@@ -1,0 +1,32 @@
+#list {
+  list-style: none;
+  padding: 0 21px;
+  margin: 0;
+}
+
+#list .item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  font-family: Arial;
+
+  border-bottom: 1px solid lightgray;
+  padding: 13px;
+}
+
+#list .item .image-container {
+  width: 55px;
+  height: 55px;
+  margin: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#list .item .image-container img {
+  max-width: 100%;
+}
+
+#list .item .created-at {
+  margin-left: auto;
+}
