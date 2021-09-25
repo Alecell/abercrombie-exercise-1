@@ -1,7 +1,28 @@
-<html>
+<html lang="en">
   <head>
-    Lorem ipsum dolor sit.
+    <meta charset="utf-8" />
+    <title>Abercrombie Exercise 1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="index.css">
   </head>
+
+  <body>
+    <ul id="list"></ul>
+  </body>
+
+  <script id="item-template" type="text/x-handlebars-template">
+    {{#each this}}
+      <li class="item">
+        <span class="id">{{id}}</span>
+        <figure class="image-container">
+          <img src="{{avatar}}" alt="{{name}}" loading="lazy" />
+        </figure>
+        <span class="name">{{name}}</span>
+        <time datetime="{{createdAt}}" class="created-at">{{makeDate createdAt}}</time>
+      </li>
+    {{/each}}
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
   <script 
     src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js" 
@@ -10,6 +31,9 @@
     referrerpolicy="no-referrer"
   ></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+  <script src="./scripts/general-helpers.js"></script>
+  <script src="./scripts/hmb-helpers.js"></script>
   <script src="./scripts/request.js"></script>
   <script src="./scripts/main.js"></script>
 </html>
