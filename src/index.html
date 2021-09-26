@@ -23,7 +23,7 @@
           <img src="{{avatar}}" alt="{{name}}" loading="lazy" />
         </figure>
         <span class="name">{{name}}</span>
-        <time datetime="{{createdAt}}" class="created-at">{{makeDate createdAt}}</time>
+        <time datetime="{{createdAt}}" class="created-at">{{creationDate createdAt "Invalid creation date"}}</time>
       </li>
     {{/each}}
   </script>

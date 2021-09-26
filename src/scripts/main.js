@@ -1,24 +1,13 @@
-import { initHbsHelpers } from './hbs-helpers/hbs-helpers.js';
-import { requestData } from './request.js';
+import { listUsers } from './core/list-users.js';
+import { initHbsHelpers } from './helpers/hbs/hbs-helpers.js';
 
 initHbsHelpers();
 
-window.onload = async function() {
+window.onload = function() {
   const body = document.getElementById('body');
-  const list = document.getElementById('list');
-
+  
   try {
-    const source = document.getElementById('item-template').innerHTML;
-    const template = Handlebars.compile(source);
-    const users = await requestData();
-    let items = '';
-
-    if (users.length) {
-      items = template(users);
-      list.innerHTML = items;
-    } else {
-      body.innerHTML = 'Seems like there are no users to show';
-    }
+    listUsers();
   } catch(err) {
     body.innerHTML = 'Something went wrong, try again later or in another browser';
   }
