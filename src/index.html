@@ -7,26 +7,32 @@
     <link rel="stylesheet" href="index.css">
   </head>
 
-  <body id="body">
-    <ul id="list">
-      <li class="loading">
-        <img src="./images/loading.svg" alt="loading">
-      </li>
-    </ul>
+  <body>
+    <div id="app">
+      <ul id="list">
+        <li class="loading">
+          <img src="./images/loading.svg" alt="loading">
+          <script id="item-template" type="text/x-handlebars-template">
+            {{#each this}}
+              <li class="item">
+                <span class="id">{{id}}</span>
+                <figure class="image-container">
+                  <img src="{{avatar}}" alt="{{name}}" loading="lazy" />
+                </figure>
+                <span class="name">{{name}}</span>
+                <time datetime="{{createdAt}}" class="created-at">{{creationDate createdAt "Invalid creation date"}}</time>
+              </li>
+            {{/each}}
+          </script>
+        </li>
+      </ul>
+      
+      <button id="toggler">
+        <span id="verb">show</span>
+        data
+      </button>
+    </div>
   </body>
-
-  <script id="item-template" type="text/x-handlebars-template">
-    {{#each this}}
-      <li class="item">
-        <span class="id">{{id}}</span>
-        <figure class="image-container">
-          <img src="{{avatar}}" alt="{{name}}" loading="lazy" />
-        </figure>
-        <span class="name">{{name}}</span>
-        <time datetime="{{createdAt}}" class="created-at">{{creationDate createdAt "Invalid creation date"}}</time>
-      </li>
-    {{/each}}
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>

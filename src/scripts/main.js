@@ -1,14 +1,11 @@
 import { listUsers } from './core/list-users.js';
-import { initHbsHelpers } from './helpers/hbs/hbs.js';
+import { toggleData } from './core/toggle-data.js';
+import { hbsHelpers } from './helpers/hbs/hbs.js';
 
-initHbsHelpers();
+hbsHelpers.init();
 
 window.onload = function() {
-  const body = document.getElementById('body');
-  
-  try {
-    listUsers();
-  } catch(err) {
-    body.innerHTML = 'Something went wrong, try again later or in another browser';
-  }
+  listUsers.init();
+  toggleData.init();
+
 };

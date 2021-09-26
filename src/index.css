@@ -1,6 +1,14 @@
+html, body {
+  font-size: 62.5%;
+}
+
+#app {
+  font-size: 1.6rem;
+}
+
 #list {
   list-style: none;
-  padding: 0 21px;
+  padding: 0 2.1rem 7rem;
   margin: 0;
 }
 
@@ -12,7 +20,15 @@
   font-family: Arial;
 
   border-bottom: 1px solid lightgray;
-  padding: 13px;
+  padding: 1.3rem;
+}
+
+#list .item .id {
+  filter: blur(6px);
+}
+
+#list.show .item .id {
+  filter: blur(0);
 }
 
 #list .item .image-container {
@@ -31,10 +47,38 @@
 
 #list .item .created-at {
   margin-left: auto;
+  filter: blur(6px);
+}
+
+#list.show .item .created-at {
+  filter: blur(0);
 }
 
 #list .loading {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#toggler {
+  min-width: 140px;
+  text-align: center;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #253746;
+  transition: .34s background-color ease;
+  border: 0;
+  border-radius: 3px;
+  padding: 1.3rem 2.1rem;
+  cursor: pointer;
+
+  position: fixed;
+  bottom: 1.3rem;
+  right: 1.3rem;
+}
+
+#toggler:hover {
+  background-color: #192733;
 }
