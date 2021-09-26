@@ -1,4 +1,4 @@
-import { creationDate } from './hbs-helpers.js';
+import { creationDate } from './hbs.js';
 
 describe("Handlebars Helpers", () => {
   describe("makeDate", () => {

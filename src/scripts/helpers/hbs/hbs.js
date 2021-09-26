@@ -1,4 +1,4 @@
-import { parseDate } from '../general/general-helpers.js';
+import { parseDate } from '../general/general.js';
 
 export function creationDate(isoString, fallbackMessage) {
   const { date, time } = parseDate(isoString);
@@ -9,6 +9,12 @@ export function creationDate(isoString, fallbackMessage) {
   return content;
 }
 
-export function initHbsHelpers() {
-  Handlebars.registerHelper("creationDate", creationDate);
-}
+export const hbsHelpers = (function() {
+  function init() {
+    Handlebars.registerHelper("creationDate", creationDate);
+  }
+
+  return {
+    init,
+  }
+})();

@@ -1,4 +1,4 @@
-import { parseDate, isValidDate } from './general-helpers.js';
+import { parseDate, isValidDate } from './general.js';
 
 describe("General Helpers", () => {
   describe("parseDate", () => {
