@@ -16,6 +16,8 @@
 }
 
 #list .item .image-container {
+  min-width: 55px;
+  min-height: 55px;
   width: 55px;
   height: 55px;
   margin: 0;
