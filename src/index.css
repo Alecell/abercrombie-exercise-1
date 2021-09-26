@@ -30,3 +30,9 @@
 #list .item .created-at {
   margin-left: auto;
 }
+
+#list .loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
