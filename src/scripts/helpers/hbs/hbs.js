@@ -1,4 +1,4 @@
-import { parseDate } from '../general/general-helpers.js';
+import { parseDate } from '../general/general.js';
 
 export function creationDate(isoString, fallbackMessage) {
   const { date, time } = parseDate(isoString);

@@ -1,5 +1,5 @@
 import { listUsers } from './core/list-users.js';
-import { initHbsHelpers } from './helpers/hbs/hbs-helpers.js';
+import { initHbsHelpers } from './helpers/hbs/hbs.js';
 
 initHbsHelpers();
 
