@@ -14,5 +14,7 @@ export function creationDate(isoString, fallbackMessage) {
     Handlebars.registerHelper("creationDate", creationDate);
   }
 
-  window.addEventListener('load', init);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('load', init);
+  }
 })();
