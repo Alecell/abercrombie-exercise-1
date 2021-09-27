@@ -12,6 +12,7 @@
       <ul id="list">
         <li class="loading">
           <img src="./images/loading.svg" alt="loading">
+
           <script id="item-template" type="text/x-handlebars-template">
             {{#each this}}
               <li class="item">
@@ -24,6 +25,7 @@
               </li>
             {{/each}}
           </script>
+
         </li>
       </ul>
       
@@ -37,5 +39,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 
-  <script type="module" src="./scripts/main.js"></script>
+  <script type="module" src="./scripts/helpers/hbs/hbs.js"></script>
+  <script type="module" src="./scripts/core/list-users.js"></script>
+  <script type="module" src="./scripts/core/toggle-data.js"></script>
 </html>

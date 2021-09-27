@@ -1,4 +1,4 @@
-export const toggleData = (function() {
+(function() {
   function switchVerb(el) {
     if (el.innerHTML === "show") el.innerHTML = "hide"
     else if (el.innerHTML === "hide") el.innerHTML = "show"
@@ -15,7 +15,5 @@ export const toggleData = (function() {
     })
   }
 
-  return {
-    init,
-  }
+  window.addEventListener('load', init);
 })();

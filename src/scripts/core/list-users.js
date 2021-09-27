@@ -1,6 +1,6 @@
 import { UserService } from '../services/user.js';
 
-export const listUsers = (function() {
+(function() {
   /**
    * I was in doubt if the "unordered list" was only the tag
    * or if it was to shuffle the items too
@@ -32,7 +32,5 @@ export const listUsers = (function() {
     }
   }
 
-  return {
-    init,
-  }
+  window.addEventListener('load', init);
 })();

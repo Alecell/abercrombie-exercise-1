@@ -27,10 +27,6 @@ html, body {
   filter: blur(6px);
 }
 
-#list.show .item .id {
-  filter: blur(0);
-}
-
 #list .item .image-container {
   min-width: 55px;
   min-height: 55px;
@@ -50,7 +46,8 @@ html, body {
   filter: blur(6px);
 }
 
-#list.show .item .created-at {
+#list.show .item .created-at,
+#list.show .item .id {
   filter: blur(0);
 }
 

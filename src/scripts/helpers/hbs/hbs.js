@@ -9,12 +9,10 @@ export function creationDate(isoString, fallbackMessage) {
   return content;
 }
 
-export const hbsHelpers = (function() {
+(function() {
   function init() {
     Handlebars.registerHelper("creationDate", creationDate);
   }
 
-  return {
-    init,
-  }
+  window.addEventListener('load', init);
 })();
